@@ -10,15 +10,29 @@
 
 		
 		<title> Dijkstra算法 -  T仔</title>
-		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/Tioz.github-io/lib/mdui/mdui.min.css">
+
+		
+<script src="/Tioz.github-io/lib/mdui/mdui.min.js"></script>
+
 		<!-- lazyload -->
-		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		
+<script src="/Tioz.github-io/lib/lazysizes.js"></script>
+
 		<!-- smooth-scrolling -->
-		<script src="https://unpkg.com/smooth-scrolling.js@1.0.0"></script>
+		
+<script src="/Tioz.github-io/lib/smooth-scrolling.js"></script>
+
 		<!-- highlight -->
-		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
-		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		
+<link rel="stylesheet" href="/Tioz.github-io/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/Tioz.github-io/lib/highlight/highlight.min.js"></script>
+
 		<!-- 预置 kiraicon -->
 		
 <link rel="stylesheet" href="/Tioz.github-io/lib/iconfont/iconfont.css">
@@ -26,7 +40,7 @@
 		
 		<link
 			rel="shortcut icon"
-			href="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+			href="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 			type="image/png"
 		/>
 		
@@ -52,7 +66,7 @@
 	<body>
 		<div
 			class="kira-background"
-			style="background-image: url('https://raw.githubusercontent.com/Tioz/Picture/main/1.jpg')"
+			style="background-image: url('https://cdn.jsdelivr.net/gh/Tioz/img/1.jpg')"
 		></div>
 		<div class="kira-header">
     <a
@@ -64,7 +78,7 @@
     </a>
     <a href="/Tioz.github-io/" title="T仔">
         <img
-			src="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+			src="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 			alt="by T仔"
 		/>
     </a>
@@ -72,9 +86,9 @@
 		<div class="kira-body">
 			<div class="kira-sidebar" id="sidebar">
 	<div class="kira-avatar mdui-ripple">
-		<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg" title="by T仔">
+		<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg" title="by T仔">
 			<img
-				src="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+				src="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 				alt="by T仔"
 			/>
 		</a>
@@ -291,6 +305,14 @@
         </div>
     </div>
 </div>
+
+	
+<link rel="stylesheet" href="/Tioz.github-io/css/kira-code-copy.css">
+
+	
+<script src="/Tioz.github-io/js/kira-code-copy.js"></script>
+
+
 <div class="kira-post">
 	<article>
 		
@@ -299,7 +321,7 @@
 			style="padding-bottom: '56.25%'"
 		>
 			<img
-				data-src="https://raw.githubusercontent.com/Tioz/Picture/main/1.jpg"
+				data-src="https://cdn.jsdelivr.net/gh/Tioz/img/1.jpg"
 				data-sizes="auto"
 				alt="Dijkstra算法"
 				class="lazyload kira-post-cover-image disabled-kira-image"
@@ -329,7 +351,7 @@
 <p>比如一开始是放入源点，然后更新距离，更新到的点都放入堆中</p>
 <p>(如果已经更新过该点<code>st[i]==true</code>,就不放入(算法保证每次取最近的点,也就是第一次更新就是最短的)</p>
 <p>下一个while循环，直接取堆顶，就是最近的点</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_SIZE 10010</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//稠密图</span></span><br><span class="line"><span class="comment">//O(n^2)</span></span><br><span class="line"><span class="type">int</span> dis[<span class="number">100</span>];<span class="comment">//i点 到 源点 距离</span></span><br><span class="line"><span class="type">int</span> gra[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line"><span class="type">bool</span> st[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dijkstra1</span><span class="params">(<span class="type">int</span> n)</span><span class="comment">//n个点</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(dis, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> dis);</span><br><span class="line">	dis[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//找不在集合中 且 距离源点最短 的点</span></span><br><span class="line">		<span class="type">int</span> t = <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">			<span class="keyword">if</span> (!st[j] &amp;&amp; (t == <span class="number">-1</span> || dis[t] &gt; dis[j]))</span><br><span class="line">				t = j;</span><br><span class="line">		</span><br><span class="line">		st[t] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (t == n)<span class="keyword">break</span>;<span class="comment">//小优化</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//更新</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">			dis[j] = <span class="built_in">min</span>(dis[j], dis[t] + gra[t][j]);</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (dis[n] == <span class="number">0x3f3f3f3f</span>)<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">return</span> dis[n];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//稀疏图 </span></span><br><span class="line"><span class="comment">//O(mlogn)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> M 100</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; PII;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> h[N], e[M], ne[N], w[M], idx;<span class="comment">//链式前向星存法</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b,<span class="type">int</span> c)</span><span class="comment">//邻接表</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dijkstra2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(dis, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> dis);</span><br><span class="line">	<span class="built_in">memset</span>(h, <span class="number">-1</span>, <span class="keyword">sizeof</span> h);</span><br><span class="line"></span><br><span class="line">	priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt;&gt;heap;</span><br><span class="line">	heap.<span class="built_in">push</span>(&#123; <span class="number">0</span>,<span class="number">1</span> &#125;);</span><br><span class="line">	dis[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (!heap.<span class="built_in">empty</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> now = heap.<span class="built_in">top</span>();</span><br><span class="line">		heap.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> vertex = now.second, distance = now.first;</span><br><span class="line">		<span class="keyword">if</span> (st[vertex])<span class="keyword">continue</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = h[vertex]; i != <span class="number">-1</span>; i = ne[i])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> j = e[i];</span><br><span class="line">			<span class="keyword">if</span> (dis[j] &gt; dis[vertex] + w[j])</span><br><span class="line">			&#123;</span><br><span class="line">				dis[j] = dis[vertex] + w[j];</span><br><span class="line">				heap.<span class="built_in">push</span>(&#123; dis[j],j &#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;queue&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAX_SIZE 10010</span><br><br><span class="hljs-comment">//稠密图</span><br><span class="hljs-comment">//O(n^2)</span><br><span class="hljs-type">int</span> dis[<span class="hljs-number">100</span>];<span class="hljs-comment">//i点 到 源点 距离</span><br><span class="hljs-type">int</span> gra[<span class="hljs-number">100</span>][<span class="hljs-number">100</span>];<br><span class="hljs-type">bool</span> st[<span class="hljs-number">100</span>];<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">dijkstra1</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span><span class="hljs-comment">//n个点</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">memset</span>(dis, <span class="hljs-number">0x3f</span>, <span class="hljs-keyword">sizeof</span> dis);<br>	dis[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>	&#123;<br>		<span class="hljs-comment">//找不在集合中 且 距离源点最短 的点</span><br>		<span class="hljs-type">int</span> t = <span class="hljs-number">-1</span>;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= n; j++)<br>			<span class="hljs-keyword">if</span> (!st[j] &amp;&amp; (t == <span class="hljs-number">-1</span> || dis[t] &gt; dis[j]))<br>				t = j;<br>		<br>		st[t] = <span class="hljs-literal">true</span>;<br><br>		<span class="hljs-keyword">if</span> (t == n)<span class="hljs-keyword">break</span>;<span class="hljs-comment">//小优化</span><br>		<br>		<span class="hljs-comment">//更新</span><br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= n; j++)<br>			dis[j] = <span class="hljs-built_in">min</span>(dis[j], dis[t] + gra[t][j]);<br>		<br><br>	&#125;<br><br><br>	<span class="hljs-keyword">if</span> (dis[n] == <span class="hljs-number">0x3f3f3f3f</span>)<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>	<span class="hljs-keyword">return</span> dis[n];<br>&#125;<br><br><span class="hljs-comment">//稀疏图 </span><br><span class="hljs-comment">//O(mlogn)</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> N 100</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> M 100</span><br><span class="hljs-keyword">typedef</span> pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; PII;<br><br><span class="hljs-type">int</span> n, m;<br><span class="hljs-type">int</span> h[N], e[M], ne[N], w[M], idx;<span class="hljs-comment">//链式前向星存法</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b,<span class="hljs-type">int</span> c)</span><span class="hljs-comment">//邻接表</span></span><br><span class="hljs-function"></span>&#123;<br>	e[idx] = b, w[idx] = c, ne[idx] = h[a], h[a] = idx++;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">dijkstra2</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-built_in">memset</span>(dis, <span class="hljs-number">0x3f</span>, <span class="hljs-keyword">sizeof</span> dis);<br>	<span class="hljs-built_in">memset</span>(h, <span class="hljs-number">-1</span>, <span class="hljs-keyword">sizeof</span> h);<br><br>	priority_queue&lt;PII, vector&lt;PII&gt;, greater&lt;PII&gt;&gt;heap;<br>	heap.<span class="hljs-built_in">push</span>(&#123; <span class="hljs-number">0</span>,<span class="hljs-number">1</span> &#125;);<br>	dis[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span> (!heap.<span class="hljs-built_in">empty</span>())<br>	&#123;<br>		<span class="hljs-keyword">auto</span> now = heap.<span class="hljs-built_in">top</span>();<br>		heap.<span class="hljs-built_in">pop</span>();<br><br>		<span class="hljs-type">int</span> vertex = now.second, distance = now.first;<br>		<span class="hljs-keyword">if</span> (st[vertex])<span class="hljs-keyword">continue</span>;<br>		<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = h[vertex]; i != <span class="hljs-number">-1</span>; i = ne[i])<br>		&#123;<br>			<span class="hljs-type">int</span> j = e[i];<br>			<span class="hljs-keyword">if</span> (dis[j] &gt; dis[vertex] + w[j])<br>			&#123;<br>				dis[j] = dis[vertex] + w[j];<br>				heap.<span class="hljs-built_in">push</span>(&#123; dis[j],j &#125;);<br>			&#125;<br>		&#125;<br>	&#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><p>改用<code>邻接表</code>数据结构</p>
@@ -368,9 +390,6 @@
 			<a class="kirafont icon-tag-fill -none-link" href="/Tioz.github-io/tags/Acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" rel="tag">Acwing基础算法</a> <a class="kirafont icon-tag-fill -none-link" href="/Tioz.github-io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag">最短路径</a>
 		
 	</div>
-	
-		<script src="/js/kira-code-copy.js"></script>
-	
 	
 	<div class="kira-post-footer">
 		

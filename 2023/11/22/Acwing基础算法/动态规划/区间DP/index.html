@@ -10,15 +10,29 @@
 
 		
 		<title> 区间DP -  T仔</title>
-		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/Tioz.github-io/lib/mdui/mdui.min.css">
+
+		
+<script src="/Tioz.github-io/lib/mdui/mdui.min.js"></script>
+
 		<!-- lazyload -->
-		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		
+<script src="/Tioz.github-io/lib/lazysizes.js"></script>
+
 		<!-- smooth-scrolling -->
-		<script src="https://unpkg.com/smooth-scrolling.js@1.0.0"></script>
+		
+<script src="/Tioz.github-io/lib/smooth-scrolling.js"></script>
+
 		<!-- highlight -->
-		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
-		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		
+<link rel="stylesheet" href="/Tioz.github-io/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/Tioz.github-io/lib/highlight/highlight.min.js"></script>
+
 		<!-- 预置 kiraicon -->
 		
 <link rel="stylesheet" href="/Tioz.github-io/lib/iconfont/iconfont.css">
@@ -26,7 +40,7 @@
 		
 		<link
 			rel="shortcut icon"
-			href="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+			href="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 			type="image/png"
 		/>
 		
@@ -52,7 +66,7 @@
 	<body>
 		<div
 			class="kira-background"
-			style="background-image: url('https://raw.githubusercontent.com/Tioz/Picture/main/1.jpg')"
+			style="background-image: url('https://cdn.jsdelivr.net/gh/Tioz/img/1.jpg')"
 		></div>
 		<div class="kira-header">
     <a
@@ -64,7 +78,7 @@
     </a>
     <a href="/Tioz.github-io/" title="T仔">
         <img
-			src="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+			src="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 			alt="by T仔"
 		/>
     </a>
@@ -72,9 +86,9 @@
 		<div class="kira-body">
 			<div class="kira-sidebar" id="sidebar">
 	<div class="kira-avatar mdui-ripple">
-		<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg" title="by T仔">
+		<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg" title="by T仔">
 			<img
-				src="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+				src="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 				alt="by T仔"
 			/>
 		</a>
@@ -291,6 +305,14 @@
         </div>
     </div>
 </div>
+
+	
+<link rel="stylesheet" href="/Tioz.github-io/css/kira-code-copy.css">
+
+	
+<script src="/Tioz.github-io/js/kira-code-copy.js"></script>
+
+
 <div class="kira-post">
 	<article>
 		
@@ -299,7 +321,7 @@
 			style="padding-bottom: '56.25%'"
 		>
 			<img
-				data-src="https://raw.githubusercontent.com/Tioz/Picture/main/1.jpg"
+				data-src="https://cdn.jsdelivr.net/gh/Tioz/img/1.jpg"
 				data-sizes="auto"
 				alt="区间DP"
 				class="lazyload kira-post-cover-image disabled-kira-image"
@@ -313,7 +335,7 @@
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
 		<p>###石子合并</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//石子合并(最小代价)</span></span><br><span class="line"><span class="comment">//用一个区间来求下一个区间</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">10010</span>;</span><br><span class="line"><span class="type">int</span> f[N][N], a[N], s[N], n;</span><br><span class="line"><span class="comment">//f[i][j] 合并第i堆到第j堆的最小代价</span></span><br><span class="line"><span class="comment">//遍历每对分区间</span></span><br><span class="line"><span class="comment">//求最大</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">f1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> len=<span class="number">2</span>;len&lt;=n;len++)<span class="comment">//遍历len，从最小元开始求</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//区间范围</span></span><br><span class="line">			<span class="type">int</span> l = i, r = i + len - <span class="number">1</span>;</span><br><span class="line">			</span><br><span class="line">			f[l][r] = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> k = l; k &lt; r; k++)</span><br><span class="line">				f[l][r] = <span class="built_in">min</span>(f[l][r], f[l][k] + f[k + <span class="number">1</span>][r] + s[r] - s[l]);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> f[<span class="number">1</span>][n];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//PS:</span></span><br><span class="line"><span class="comment">//遇到二者合一的最大或最小</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		s[i] = s[i - <span class="number">1</span>] + a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">f1</span>() &lt;&lt; endl;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//石子合并(最小代价)</span><br><span class="hljs-comment">//用一个区间来求下一个区间</span><br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">10010</span>;<br><span class="hljs-type">int</span> f[N][N], a[N], s[N], n;<br><span class="hljs-comment">//f[i][j] 合并第i堆到第j堆的最小代价</span><br><span class="hljs-comment">//遍历每对分区间</span><br><span class="hljs-comment">//求最大</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">f1</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> len=<span class="hljs-number">2</span>;len&lt;=n;len++)<span class="hljs-comment">//遍历len，从最小元开始求</span><br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>		&#123;<br>			<span class="hljs-comment">//区间范围</span><br>			<span class="hljs-type">int</span> l = i, r = i + len - <span class="hljs-number">1</span>;<br>			<br>			f[l][r] = <span class="hljs-number">0x3f3f3f3f</span>;<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = l; k &lt; r; k++)<br>				f[l][r] = <span class="hljs-built_in">min</span>(f[l][r], f[l][k] + f[k + <span class="hljs-number">1</span>][r] + s[r] - s[l]);<br>		&#125;<br><br>	<span class="hljs-keyword">return</span> f[<span class="hljs-number">1</span>][n];<br>&#125;<br><span class="hljs-comment">//PS:</span><br><span class="hljs-comment">//遇到二者合一的最大或最小</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cin &gt;&gt; n;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>	&#123;<br>		cin &gt;&gt; a[i];<br>		s[i] = s[i - <span class="hljs-number">1</span>] + a[i];<br>	&#125;<br>	cout &lt;&lt; <span class="hljs-built_in">f1</span>() &lt;&lt; endl;<br>&#125; <br></code></pre></td></tr></table></figure>
 
 
 	</article>
@@ -340,9 +362,6 @@
 			<a class="kirafont icon-tag-fill -none-link" href="/Tioz.github-io/tags/Acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" rel="tag">Acwing基础算法</a> <a class="kirafont icon-tag-fill -none-link" href="/Tioz.github-io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a>
 		
 	</div>
-	
-		<script src="/js/kira-code-copy.js"></script>
-	
 	
 	<div class="kira-post-footer">
 		

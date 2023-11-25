@@ -10,15 +10,29 @@
 
 		
 		<title> Floyd算法 -  T仔</title>
-		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/Tioz.github-io/lib/mdui/mdui.min.css">
+
+		
+<script src="/Tioz.github-io/lib/mdui/mdui.min.js"></script>
+
 		<!-- lazyload -->
-		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		
+<script src="/Tioz.github-io/lib/lazysizes.js"></script>
+
 		<!-- smooth-scrolling -->
-		<script src="https://unpkg.com/smooth-scrolling.js@1.0.0"></script>
+		
+<script src="/Tioz.github-io/lib/smooth-scrolling.js"></script>
+
 		<!-- highlight -->
-		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
-		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		
+<link rel="stylesheet" href="/Tioz.github-io/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/Tioz.github-io/lib/highlight/highlight.min.js"></script>
+
 		<!-- 预置 kiraicon -->
 		
 <link rel="stylesheet" href="/Tioz.github-io/lib/iconfont/iconfont.css">
@@ -26,7 +40,7 @@
 		
 		<link
 			rel="shortcut icon"
-			href="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+			href="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 			type="image/png"
 		/>
 		
@@ -52,7 +66,7 @@
 	<body>
 		<div
 			class="kira-background"
-			style="background-image: url('https://raw.githubusercontent.com/Tioz/Picture/main/1.jpg')"
+			style="background-image: url('https://cdn.jsdelivr.net/gh/Tioz/img/1.jpg')"
 		></div>
 		<div class="kira-header">
     <a
@@ -64,7 +78,7 @@
     </a>
     <a href="/Tioz.github-io/" title="T仔">
         <img
-			src="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+			src="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 			alt="by T仔"
 		/>
     </a>
@@ -72,9 +86,9 @@
 		<div class="kira-body">
 			<div class="kira-sidebar" id="sidebar">
 	<div class="kira-avatar mdui-ripple">
-		<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg" title="by T仔">
+		<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg" title="by T仔">
 			<img
-				src="https://raw.githubusercontent.com/Tioz/Picture/main/3.jpg"
+				src="https://cdn.jsdelivr.net/gh/Tioz/img/3.jpg"
 				alt="by T仔"
 			/>
 		</a>
@@ -291,6 +305,14 @@
         </div>
     </div>
 </div>
+
+	
+<link rel="stylesheet" href="/Tioz.github-io/css/kira-code-copy.css">
+
+	
+<script src="/Tioz.github-io/js/kira-code-copy.js"></script>
+
+
 <div class="kira-post">
 	<article>
 		
@@ -299,7 +321,7 @@
 			style="padding-bottom: '56.25%'"
 		>
 			<img
-				data-src="https://raw.githubusercontent.com/Tioz/Picture/main/1.jpg"
+				data-src="https://cdn.jsdelivr.net/gh/Tioz/img/1.jpg"
 				data-sizes="auto"
 				alt="Floyd算法"
 				class="lazyload kira-post-cover-image disabled-kira-image"
@@ -314,7 +336,7 @@
 		</div>
 		<p><img src="https://cdn.jsdelivr.net/gh/Tioz/img/4.jpg"></p>
 <p>##<em>Floyd</em>算法</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> INF 1e9</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">10010</span>;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> ans[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">floyd</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//ans[i][j]</span></span><br><span class="line">	<span class="comment">//点i到点j的距离</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">			ans[i][j] = i == j ? <span class="number">0</span> : INF;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="comment">//i 到 j</span></span><br><span class="line">	<span class="comment">//就是 i 到 k 到 j</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; n; k++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">				ans[i][j] = <span class="built_in">min</span>(ans[i][j], ans[i][k] + ans[k][j]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">//无向图可以小优化</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">0</span>;k&lt;n;k++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; n; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				ans[i][j] = ans[i][k] + ans[k][j];</span><br><span class="line">				ans[j][i] = ans[i][j];</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> a, b, w;</span><br><span class="line">		cin &gt;&gt; a &gt;&gt; b &gt;&gt; w;</span><br><span class="line">		</span><br><span class="line">		ans[a][b] = <span class="built_in">min</span>(ans[a][b], w);<span class="comment">//重边</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">floyd</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> from, des;</span><br><span class="line">	cin &gt;&gt; from &gt;&gt; des;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (ans[from][des] &gt; INF / <span class="number">2</span>)</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;impossible&quot;</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		cout &lt;&lt; ans[from][des] &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-meta">#<span class="hljs-keyword">define</span> INF 1e9</span><br><br><span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">10010</span>;<br><span class="hljs-type">int</span> n, m;<br><span class="hljs-type">int</span> ans[N][N];<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">floyd</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">//ans[i][j]</span><br>	<span class="hljs-comment">//点i到点j的距离</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++)<br>			ans[i][j] = i == j ? <span class="hljs-number">0</span> : INF;<br>	<br><br>	<span class="hljs-comment">//i 到 j</span><br>	<span class="hljs-comment">//就是 i 到 k 到 j</span><br>	<span class="hljs-comment">//</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>; k &lt; n; k++)<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++)<br>				ans[i][j] = <span class="hljs-built_in">min</span>(ans[i][j], ans[i][k] + ans[k][j]);<br><br><br><br>	<span class="hljs-comment">//无向图可以小优化</span><br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k=<span class="hljs-number">0</span>;k&lt;n;k++)<br>		<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = i + <span class="hljs-number">1</span>; j &lt; n; j++)<br>			&#123;<br>				ans[i][j] = ans[i][k] + ans[k][j];<br>				ans[j][i] = ans[i][j];<br>			&#125;<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cin &gt;&gt; n &gt;&gt; m;<br>	<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++)<br>	&#123;<br>		<span class="hljs-type">int</span> a, b, w;<br>		cin &gt;&gt; a &gt;&gt; b &gt;&gt; w;<br>		<br>		ans[a][b] = <span class="hljs-built_in">min</span>(ans[a][b], w);<span class="hljs-comment">//重边</span><br>	&#125;<br><br>	<span class="hljs-built_in">floyd</span>();<br><br><br><br>	<span class="hljs-type">int</span> from, des;<br>	cin &gt;&gt; from &gt;&gt; des;<br><br>	<span class="hljs-keyword">if</span> (ans[from][des] &gt; INF / <span class="hljs-number">2</span>)<br>		cout &lt;&lt; <span class="hljs-string">&quot;impossible&quot;</span> &lt;&lt; endl;<br>	<span class="hljs-keyword">else</span><br>		cout &lt;&lt; ans[from][des] &lt;&lt; endl;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 	</article>
@@ -341,9 +363,6 @@
 			<a class="kirafont icon-tag-fill -none-link" href="/Tioz.github-io/tags/Acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/" rel="tag">Acwing基础算法</a> <a class="kirafont icon-tag-fill -none-link" href="/Tioz.github-io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" rel="tag">最短路径</a>
 		
 	</div>
-	
-		<script src="/js/kira-code-copy.js"></script>
-	
 	
 	<div class="kira-post-footer">
 		
